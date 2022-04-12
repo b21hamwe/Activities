@@ -2,6 +2,7 @@ package com.example.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,8 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
         signin = findViewById(R.id.sign_in_button);
         signin.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+                Log.d("==>", "MainActivity Sign in button Pressed.");
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                        startActivity(intent);
 
             }
         });
