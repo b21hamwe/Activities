@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.d("==>", "MainActivity Created.");
+
+
+
+        signin = findViewById(R.id.sign_in_button);
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
     }
 
     public MainActivity() {
@@ -47,3 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("==>", "MainActivity Destroyed.");
     }
 }
+
+
+
+
