@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
 
     private Button signout;
+    private TextView usernameView;
 
 
     @Override
@@ -20,6 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         signout = findViewById(R.id.sign_out_button);
+        usernameView = findViewById(R.id.username_text);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -28,6 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
         String username = extras.getString("username");
         Log.d("==>", "Username from intent" + username);
 
+        usernameView.setText(username);
 
         signout.setOnClickListener(new View.OnClickListener() {
 

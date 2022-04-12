@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
 
 
-                        intent.putExtra("username",username.getText().toString());
-                        startActivity(intent);
+                intent.putExtra("username",username.getText().toString());
+                startActivity(intent);
             }
         });
 
